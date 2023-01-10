@@ -329,19 +329,30 @@ namespace DataLogic.Magellan.Integration.App
                     }
 
                     Log("Successful Parse - Barcode Data: " + parsedResponse.BarcodeData);
+
                     // simulate a keyboard input.
-                    foreach (var chr in parsedResponse.BarcodeData)
+                    // If there's no uppercase letters, we can input as an entire string.
+
+                    if (parsedResponse.BarcodeData == parsedResponse.BarcodeData.ToLower())
                     {
-                        if (char.IsUpper(chr))
+                        _inputSimulator.Keyboard.TextEntry(parsedResponse.BarcodeData);
+                    }
+                    else
+                    {
+                        // Otherwise loop through each char and press shift before the uppercase char.
+                        foreach (var chr in parsedResponse.BarcodeData)
                         {
-                            _inputSimulator.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
-                        }
+                            if (char.IsUpper(chr))
+                            {
+                                _inputSimulator.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                            }
 
-                        _inputSimulator.Keyboard.TextEntry(chr);
+                            _inputSimulator.Keyboard.TextEntry(chr);
 
-                        if (char.IsUpper(chr))
-                        {
-                            _inputSimulator.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                            if (char.IsUpper(chr))
+                            {
+                                _inputSimulator.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                            }
                         }
                     }
                     
