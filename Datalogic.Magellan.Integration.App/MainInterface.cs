@@ -330,7 +330,21 @@ namespace DataLogic.Magellan.Integration.App
 
                     Log("Successful Parse - Barcode Data: " + parsedResponse.BarcodeData);
                     // simulate a keyboard input.
-                    _inputSimulator.Keyboard.TextEntry(parsedResponse.BarcodeData);
+                    foreach (var chr in parsedResponse.BarcodeData)
+                    {
+                        if (char.IsUpper(chr))
+                        {
+                            _inputSimulator.Keyboard.KeyDown(VirtualKeyCode.SHIFT);
+                        }
+
+                        _inputSimulator.Keyboard.TextEntry(chr);
+
+                        if (char.IsUpper(chr))
+                        {
+                            _inputSimulator.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+                        }
+                    }
+                    
                     // add a newline after we have finished, same as pressing enter on the keyboard.
                     _inputSimulator.Keyboard.KeyPress(VirtualKeyCode.RETURN);
                 }
