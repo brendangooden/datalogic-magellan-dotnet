@@ -1,5 +1,5 @@
 # DataLogic Magellan Integration for .NET
-A .NET C# class library for communicating with a Datalogic Magellan 9xxx series Fixed Retail scanner/scales and a sample WinForms Desktop App.
+A .NET C# class library for communicating with a Datalogic Magellan 9xxx series Fixed Retail scanner/scales.
 
 This library has been written to handle communication with the scanner/scale via single RS-232 cable interface. Dual cable interface is available however I have not tested or implemented this.
 

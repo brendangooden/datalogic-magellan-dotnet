@@ -5,8 +5,6 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLogic.Magellan.Integration", "Datalogic.Magellan.Integration\DataLogic.Magellan.Integration.csproj", "{371416D2-1B5E-4F2A-8D77-6D2805D258EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLogic.Magellan.Integration.App", "Datalogic.Magellan.Integration.App\DataLogic.Magellan.Integration.App.csproj", "{A7A694B4-71D2-497D-B3CF-08E7303E72C3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{371416D2-1B5E-4F2A-8D77-6D2805D258EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{371416D2-1B5E-4F2A-8D77-6D2805D258EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{371416D2-1B5E-4F2A-8D77-6D2805D258EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A7A694B4-71D2-497D-B3CF-08E7303E72C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A7A694B4-71D2-497D-B3CF-08E7303E72C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A7A694B4-71D2-497D-B3CF-08E7303E72C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A7A694B4-71D2-497D-B3CF-08E7303E72C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
