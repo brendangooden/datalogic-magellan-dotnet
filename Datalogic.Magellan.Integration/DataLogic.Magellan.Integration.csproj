@@ -1,10 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+	  <TargetFramework>net7.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Title>DataLogic.Magellan.Integration</Title>
+	  <PackageId>DataLogic.Magellan.Integration</PackageId>
+	  <Version>1.0.0</Version>
+	  <Authors>Brendan Gooden</Authors>
+	  <Description>A .NET C# class library for communicating with a Datalogic Magellan 9xxx series Fixed Retail scanner/scales.</Description>
+	  <PackageProjectUrl>https://github.com/brendangooden/datalogic-magellan-dotnet</PackageProjectUrl>
+	  <PackageOutputPath>../publish/</PackageOutputPath>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageTags>Datalogic Magellan Scanner Scale</PackageTags>
+	  <Copyright>Copyright Brendan Gooden 2022</Copyright>
+	  <RepositoryUrl>https://github.com/brendangooden/datalogic-magellan-dotnet.git</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
