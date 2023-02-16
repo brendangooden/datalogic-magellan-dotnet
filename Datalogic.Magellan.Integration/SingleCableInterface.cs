@@ -31,7 +31,6 @@ namespace DataLogic.Magellan.Integration
             _logger?.LogInformation($@"Sending weight request {RequestWeightCommand}");
             try
             {
-                return;
                 await Task.Run(() => _serialPort.Write(RequestWeightCommand));
             }
             catch (Exception ex)
