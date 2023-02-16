@@ -31,6 +31,7 @@ namespace DataLogic.Magellan.Integration
             _logger?.LogInformation($@"Sending weight request {RequestWeightCommand}");
             try
             {
+                return;
                 await Task.Run(() => _serialPort.Write(RequestWeightCommand));
             }
             catch (Exception ex)
@@ -240,8 +241,9 @@ namespace DataLogic.Magellan.Integration
 
                 if (success)
                 {
-                    var weightString = responseString.Substring(5, 4);
-                    // E.g. 0260  for 260 grams.
+                    var weightString = responseString.Substring(4, 5);
+                    // E.g. 00260  for 260 grams.   (0.260kg)
+                    // 10215       for 10,215 grams (10.215kg)
                     weightGrams = Convert.ToInt32(weightString);
                 }
 
