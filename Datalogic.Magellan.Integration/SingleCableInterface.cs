@@ -60,9 +60,8 @@ namespace DataLogic.Magellan.Integration
             );
 
             this._serialPort.NewLine = "\r";
-            this._serialPort.Handshake = Handshake.None;
-            this._serialPort.RtsEnable = true;
-            this._serialPort.DtrEnable = true;
+            this._serialPort.Handshake = Handshake.RequestToSend;
+
             this._serialPort.WriteTimeout = 500;
 
             _serialPort.DataReceived +=  OnSerialDataReceived;
