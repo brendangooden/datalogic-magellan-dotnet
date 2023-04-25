@@ -7,7 +7,7 @@
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <Title>DataLogic.Magellan.Integration</Title>
 	  <PackageId>DataLogic.Magellan.Integration</PackageId>
-	  <Version>1.0.1</Version>
+	  <Version>1.0.2</Version>
 	  <Authors>Brendan Gooden</Authors>
 	  <Description>A .NET C# class library for communicating with a Datalogic Magellan 9xxx series Fixed Retail scanner/scales.</Description>
 	  <PackageProjectUrl>https://github.com/brendangooden/datalogic-magellan-dotnet</PackageProjectUrl>
